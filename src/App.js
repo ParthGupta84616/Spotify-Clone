@@ -3,39 +3,36 @@ import Login from './Components/Login';
 import Home from './Components/Home';
 import SpotifyWebApi from 'spotify-web-api-js';
 import { getAuthToken } from './Components/LoginAuth';
+import { useMarketValue } from './Datalayer';
 
 function App() {
-  const [token, setToken] = useState(null);
+  // const [token, setToken] = useState(null);
   const spotify = new SpotifyWebApi();
+  const [{ user, token }, dispatch ] = useMarketValue();
 
   useEffect(() => {
     const Token = getAuthToken();
     const _token = Token.access_token;
     if (_token) {
-      // Set the token state
-      setToken(_token);
-
-      // Set the access token for the Spotify API client
+      dispatch({
+        type:"SET_TOKEN",
+        token:_token,
+      })
+      
       spotify.setAccessToken(_token);
-
-      // Fetch user information
-      spotify.getMe().then(
-        (user) => {
-          console.log('User information', user);
-        },
-        (error) => {
-          console.error('Error fetching user information', error);
-        }
-      );
-
-      // Remove the access token from the URL hash
+      spotify.getMe().then((user) => {
+        dispatch({
+          type: "SET_USER",
+          user: user,
+        });
+      });
       window.location.hash = '';
     }
   }, []);
 
   return (
     <div>
-      {token ? <Home /> : <Login />}
+      {token ? <Home spotify={spotify} /> : <Login />}
     </div>
   );
 }
