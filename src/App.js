@@ -27,6 +27,12 @@ function App() {
         });
       });
       window.location.hash = '';
+      spotify.getUserPlaylists().then((playlists) =>{
+        dispatch({
+          type : "SET_PLAYLISTS",
+          playlists : playlists,
+        })
+      })
     }
   }, []);
 

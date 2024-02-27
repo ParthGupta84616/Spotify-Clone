@@ -1,7 +1,13 @@
 import React from 'react';
 import Menu from './Menu';
+import { useMarketValue } from '../Datalayer';
+import Playlist from './Playlist';
+import Playlistnames from './Playlistnames';
+
+
 
 function SideBar() {
+  const [{ playlists } , dispatch] = useMarketValue()
   return (
     <div className='h-screen flex flex-col'>
       <div className='p-8 m-2 rounded-xl' style={{ background: "#121212" }}>
@@ -17,6 +23,14 @@ function SideBar() {
         option={"Search"}
         />
       </div>
+      <div className='m-2 rounded-xl'style={{ background: "#121212" }}>
+        <Playlist />
+        {playlists?.items?.map((playlist) => (
+          <Playlistnames playlist_name={playlist.name} />
+        ))}
+      </div>
+
+
     </div>
   );
 }
