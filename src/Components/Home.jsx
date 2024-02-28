@@ -5,16 +5,16 @@ import Footer from './Footer';
 
 export default function Home({ spotify }) {
   return (
-    <div className="mainbody bg-black" style={{height:"80vh"}}>
-      <div className="player flex">
-        <div className="sidebar w-1/4 h-3/4">
+    <div className="mainbody bg-black" style={{ minHeight: "80vh" }}>
+      <div className="player flex flex-col sm:flex-row">
+        <div className="sidebar w-full sm:w-1/4">
           <SideBar />
         </div>
-        <div className="body w-3/4 h-3/4">
-          <Body />
+        <div className="body w-full sm:w-3/4">
+          <Body spotify={spotify}/>
         </div>
       </div>
-      <div className="footer h-1/4 w-full bg-w">
+      <div className="footer w-full bg-white" style={{ minHeight: "20vh" }}>
         <Footer />
       </div>
     </div>

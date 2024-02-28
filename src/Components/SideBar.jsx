@@ -23,12 +23,24 @@ function SideBar() {
         option={"Search"}
         />
       </div>
-      <div className='m-2 rounded-xl'style={{ background: "#121212" }}>
-        <Playlist />
+      <Playlist />
+      <div className='m-2 rounded-xl' style={{ background: "#121212", maxHeight: "300px", overflowY: "auto", WebkitOverflowScrolling: "touch" }}>
+        <style>
+          {`
+            ::-webkit-scrollbar {
+              background-color: gray;
+            }
+            
+          `}
+        </style>
+        
         {playlists?.items?.map((playlist) => (
-          <Playlistnames playlist_name={playlist.name} />
+          <Playlistnames key={playlist.id} playlist_name={playlist.name} />
         ))}
       </div>
+
+
+
 
 
     </div>
