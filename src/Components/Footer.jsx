@@ -2,7 +2,7 @@ import React from 'react'
 
 function Footer() {
   return (
-    <div className='bg-gray-800 h-20'> 
+    <div className='' style={{height:"20vh"}}> 
 
     </div>
   )
