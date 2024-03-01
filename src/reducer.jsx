@@ -24,6 +24,12 @@ export const reducer = (state ,action)=>{
                 ...state,
                 playlists :action.playlists
             }
+        case "SET_TOP_HITS":
+            return{
+                ...state,
+                top_hits : action.top_hits
+            }
+        
         
         
         default:

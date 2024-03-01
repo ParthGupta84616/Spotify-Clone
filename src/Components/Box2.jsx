@@ -3,7 +3,7 @@ import React from 'react';
 function Box2() {
   return (
     <div>
-        <div className="upper flex items-center justify-center mt-6 ">
+        <div className="upper flex items-center justify-center  mt-6">
             <div className="shuffle mr-4 transform transition duration-300 hover:scale-110">
               <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAABFklEQVR4nO3VQUrDQBTG8ezUA7ixPUVRewXr3it4FVt1r2cQ0YVH8Api8QoFdSV0Ifxk6FiG0IS01AlC/jAQMu/lm/dm5ktRdHT8J/CEgzaEAx84b0P4l/rq8bwMZY43XKFfk9PHdYwNOVXMcNZEOCW0bLQi/hSfNWLNhFOwgyM8xMQvDJL5QXwXuMdhyEnmU+6wX6wLbuMHXrEbR3gO3FTkNK+yipLQOI7lQipyNquyDIb4Lo1hkQNMkn0bZxEN4DIRnhQ50EarLa7WS6z0IjlcU+z9mVfLeZ0sqgztfWxgIMFkjjc2ENWW+Y6TFfGjaKdNmDX16nncw3CFejWL7cXTPt34J7FN1mr1NslaZUrWKjs6ihI/GUDWBz2TNTUAAAAASUVORK5CYII="/>
             </div>

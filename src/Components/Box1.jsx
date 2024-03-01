@@ -2,13 +2,13 @@ import React from 'react';
 
 function Box1() {
   return (
-    <div className='w-full flex p-6'>
+    <div className='w-full flex'>
       <div className=''>
         <button className='focus:outline-none'>
-          <img className='w-24 rounded-xl hover:scale-110 transition duration-300 ease-in-out transform' src="https://imgs.search.brave.com/wvHF7FALUPXK-S4FuonoJv-B94SRNb6Xcpi4h9n2Pck/rs:fit:500:0:0/g:ce/aHR0cHM6Ly8xMDAw/bG9nb3MubmV0L3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDE3LzA1/L2xvZ28tWW91VHVi/ZS01MDB4NTAwLmpw/Zw" alt="" />
+          <img className='size-20 m-3  rounded-xl hover:scale-110 transition duration-300 ease-in-out transform' src="https://imgs.search.brave.com/wvHF7FALUPXK-S4FuonoJv-B94SRNb6Xcpi4h9n2Pck/rs:fit:500:0:0/g:ce/aHR0cHM6Ly8xMDAw/bG9nb3MubmV0L3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDE3LzA1/L2xvZ28tWW91VHVi/ZS01MDB4NTAwLmpw/Zw" alt="" />
         </button>
       </div>
-      <div className="name p-4 text-xl text-white flex flex-col">
+      <div className="name text-xl mt-6 text-white flex flex-col">
         <button className='focus:outline-none'>
           <h1 className="hover:underline hover:text-white"><strong>Youtube</strong></h1>
         </button>

@@ -33,11 +33,19 @@ function App() {
           playlists : playlists,
         })
       })
+      spotify.getPlaylist("37i9dQZF1DXcBWIGoYBM5M").then(response => {
+        dispatch({
+          type: "SET_TOP_HITS",
+          top_hits: response, 
+        });
+      });
+      
+      
     }
   }, []);
 
   return (
-    <div>
+    <div >
       {token ? <Home spotify={spotify} /> : <Login />}
     </div>
   );

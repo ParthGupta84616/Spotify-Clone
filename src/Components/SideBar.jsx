@@ -9,7 +9,7 @@ import Playlistnames from './Playlistnames';
 function SideBar() {
   const [{ playlists } , dispatch] = useMarketValue()
   return (
-    <div className='flex flex-col'style={{height:"80vh"}}>
+    <div className='flex flex-col'style={{height:"85vh"}}>
       <div className='p-8 m-2 rounded-xl' style={{ background: "#121212" }}>
         <img src="https://imgs.search.brave.com/cPKolPr_yP_pEg-CWqU3HZSSu88xf_2yzR9PqAuNq5I/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/ZWRpZ2l0YWxhZ2Vu/Y3kuY29tLmF1L3dw/LWNvbnRlbnQvdXBs/b2Fkcy9TcG90aWZ5/LUxvZ28tcG5nLVJH/Qi1XaGl0ZS03NTB4/MjI1LnBuZw" alt="" className='w-4/5' />
       </div>
@@ -24,7 +24,7 @@ function SideBar() {
         />
       </div>
       <Playlist />
-      <div className='m-2 rounded-xl' style={{ background: "#121212", maxHeight: "300px", overflowY: "auto", WebkitOverflowScrolling: "touch" }}>
+      <div className='m-2 rounded-xl' style={{ background: "#121212", maxHeight: "450px", overflowY: "auto", WebkitOverflowScrolling: "touch" }}>
         <style>
           {`
             ::-webkit-scrollbar {

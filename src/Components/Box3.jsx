@@ -3,7 +3,7 @@ import VolumeBar from './VolumeBar'
 
 function Box3() {
   return (
-    <div className='flex items-center justify-center p-12 '>
+    <div className='flex items-center justify-center p-8  '>
         <div className="playlist transform transition duration-300 hover:scale-110">
         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAABH0lEQVR4nO3VPUoDQRiH8W2CIIJWgjmCvYX23sDWA1iIdtp5gRR2NjZBsPIQkg/QypSiCFp5gIBIEH8SmcAGk80mm1kQ8rTzzvvMx3+YJFlQFmjhDjtliwd84wrVOfVdwjaOcI0XPI8SD+jipD9xBtk6arhHb0RvWeIB7TBelU0z1as5odY8xY1Ur68i4i5OZzzqSXSihGuE6CO8mhr2sJIuboUwFH5OKeEhtlDJO3ED9bD7vKTDNXyPU6z4xvQ0CouLshDnBu0Z7ngu4Wr+u3ChUroYm7gsRYxVnIV/dogY4aqn/t3HcUUxwrUb6i4yanpTi/OC9wzxWxILfGaIb2OKHzLExzHF+2OkHSxHE/fBAZ7Csb/iHGu/gwuSv/wAvfIgisA/jbEAAAAASUVORK5CYII="/>
         </div>

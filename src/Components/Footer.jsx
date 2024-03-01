@@ -5,7 +5,7 @@ import Box3 from './Box3'
 
 function Footer() {
   return (
-    <div className='flex bg-black' style={{height:"20vh"}}> 
+    <div className='flex '> 
       <div className="box1 w-1/3">
         <Box1 />
       </div>
