@@ -6,7 +6,6 @@ import { getAuthToken } from './Components/LoginAuth';
 import { useMarketValue } from './Datalayer';
 
 function App() {
-  // const [token, setToken] = useState(null);
   const spotify = new SpotifyWebApi();
   const [{ user, token }, dispatch ] = useMarketValue();
 
@@ -33,7 +32,7 @@ function App() {
           playlists : playlists,
         })
       })
-      spotify.getPlaylist("37i9dQZF1DXcBWIGoYBM5M").then(response => {
+      spotify.getPlaylist("37i9dQZF1DXbYM3nMM0oPk").then(response => {
         dispatch({
           type: "SET_TOP_HITS",
           top_hits: response, 

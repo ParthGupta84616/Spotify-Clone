@@ -1,14 +1,14 @@
 import React from 'react';
 import { useMarketValue } from '../Datalayer';
 
-function Header({spotify}) {
-  const [{user},dispatch] = useMarketValue();
+function Header({ spotify }) {
+  const [{ user }, dispatch] = useMarketValue();
   return (
     <div className='flex'>
       <div className="flex items-center w-3/4 ml-4">
         <div className="p-2">
           <input 
-            className="border rounded-xl text-white p-2 w-80 transition duration-300 ease-in-out bg-gray-800 focus:bg-gray-700 focus:outline-none focus:border-transparent" 
+            className="border rounded-xl text-white p-2 w-full md:w-80 transition duration-300 ease-in-out bg-gray-800 focus:bg-gray-700 focus:outline-none focus:border-transparent" 
             type="text" 
             placeholder="Search For Songs" 
           />

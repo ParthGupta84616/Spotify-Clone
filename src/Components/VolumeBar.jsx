@@ -15,12 +15,11 @@ function VolumeBar() {
         type="range"
         min="0"
         max="100"
-        
         value={volume}
         onChange={handleVolumeChange}
-        className="slider  appearance-none  h-2 bg-gray-900 rounded-md outline-none "
+        className="slider appearance-none h-2 bg-gray-900 rounded-md outline-none "
+        style={{ width: '10vw' }}
       />
-      
     </div>
   );
 }
