@@ -1,4 +1,4 @@
-import React, {useEffect } from 'react';
+import React, { useEffect, useMemo } from 'react';
 import Login from './Components/Login';
 import Home from './Components/Home';
 import SpotifyWebApi from 'spotify-web-api-js';
@@ -6,8 +6,9 @@ import { getAuthToken } from './Components/LoginAuth';
 import { useMarketValue } from './Datalayer';
 
 function App() {
-  const spotify = new SpotifyWebApi();
   const [{ token }, dispatch ] = useMarketValue();
+
+  const spotify = useMemo(() => new SpotifyWebApi(), []);
 
   useEffect(() => {
     const Token = getAuthToken();
@@ -40,7 +41,6 @@ function App() {
       });
     }
   }, [dispatch, spotify]);
-
   return (
     <div >
       {token ? <Home spotify={spotify} /> : <Login />}
