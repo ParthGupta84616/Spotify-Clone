@@ -5,7 +5,7 @@ import Icons from './Icons';
 import Songslist from './Songslist';
 
 function Body({ spotify }) {
-  const [{ top_hits }, dispatch] = useMarketValue();
+  const [{ top_hits }] = useMarketValue();
 
   return (
     <div className='bg-gradient-to-b from-gray-900 to-black p-4'>

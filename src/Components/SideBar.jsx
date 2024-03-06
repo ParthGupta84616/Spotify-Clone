@@ -5,7 +5,7 @@ import Playlist from './Playlist';
 import Playlistnames from './Playlistnames';
 
 function SideBar() {
-  const [{ playlists }, dispatch] = useMarketValue()
+  const [{ playlists }] = useMarketValue()
   return (
     <div className='flex flex-col' style={{ minHeight: "85vh" }}>
       <div className='p-8 m-2 rounded-xl' style={{ background: "#121212" }}>
