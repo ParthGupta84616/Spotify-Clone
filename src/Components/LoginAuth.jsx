@@ -1,7 +1,8 @@
 
 const Auth = "https://accounts.spotify.com/authorize";
 const ClientId ="bcad4527ebb343d580e45ee802f78ac5";
-const Redirect="http://localhost:3000";
+const Redirect = "https://master--spotify-front-end-clone-pg.netlify.app/";
+
 const scopes=[
     "user-read-playback-state",
     "user-read-currently-playing",
