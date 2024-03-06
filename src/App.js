@@ -32,7 +32,7 @@ function App() {
           playlists : playlists,
         })
       })
-      spotify.getPlaylist("37i9dQZF1DXbYM3nMM0oPk").then(response => {
+      spotify.getPlaylist("37i9dQZF1DX0XUfTFmNBRM").then(response => {
         dispatch({
           type: "SET_TOP_HITS",
           top_hits: response, 

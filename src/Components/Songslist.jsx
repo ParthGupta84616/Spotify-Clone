@@ -2,7 +2,7 @@ import React from 'react';
 
 function Songslist({ track }) {
   return (
-    <div className="flex p-2 md:p-4">
+    <div className="flex p-2 md:p-2">
       <div className="img">
         <button><img className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24" src={track.album.images[0].url} alt={track.name} /></button>
       </div>
