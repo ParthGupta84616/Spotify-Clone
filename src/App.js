@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import Login from './Components/Login';
 import Home from './Components/Home';
 import SpotifyWebApi from 'spotify-web-api-js';
@@ -7,17 +7,17 @@ import { useMarketValue } from './Datalayer';
 
 function App() {
   const spotify = new SpotifyWebApi();
-  const [{ user, token }, dispatch ] = useMarketValue();
+  const [{ token }, dispatch] = useMarketValue();
 
   useEffect(() => {
     const Token = getAuthToken();
     const _token = Token.access_token;
     if (_token) {
       dispatch({
-        type:"SET_TOKEN",
-        token:_token,
-      })
-      
+        type: "SET_TOKEN",
+        token: _token,
+      });
+
       spotify.setAccessToken(_token);
       spotify.getMe().then((user) => {
         dispatch({
@@ -26,25 +26,23 @@ function App() {
         });
       });
       window.location.hash = '';
-      spotify.getUserPlaylists().then((playlists) =>{
+      spotify.getUserPlaylists().then((playlists) => {
         dispatch({
-          type : "SET_PLAYLISTS",
-          playlists : playlists,
-        })
-      })
+          type: "SET_PLAYLISTS",
+          playlists: playlists,
+        });
+      });
       spotify.getPlaylist("37i9dQZF1DX0XUfTFmNBRM").then(response => {
         dispatch({
           type: "SET_TOP_HITS",
-          top_hits: response, 
+          top_hits: response,
         });
       });
-      
-      
     }
-  }, []);
+  }, [dispatch]);
 
   return (
-    <div >
+    <div>
       {token ? <Home spotify={spotify} /> : <Login />}
     </div>
   );
